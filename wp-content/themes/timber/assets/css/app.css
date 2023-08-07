@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@300;400;500&display=swap");
+
+@import "tailwindcss/base";
+/*
+ * uncomment if adding custom base styles
+@import "./custom-base-styles.css";
+*/
+
+@import "tailwindcss/components";
+/*
+ * uncomment if adding custom commponents
+@import "./custom-components.css";
+*/
+
+@import "tailwindcss/utilities";
+/*
+ * uncomment if adding custom utilities
+@import "./custom-utilities.css";
+*/
+
+/* admin bar fix */
+body.admin-bar {
+  max-height: calc(100vh - 32px);
+}
+
+@layer base {
+  html {
+    font-family: Rubik, system-ui, sans-serif;
+  }
+}

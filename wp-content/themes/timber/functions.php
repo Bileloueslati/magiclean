@@ -170,4 +170,9 @@ class StarterSite extends Timber\Site {
 
 }
 
+define('IS_VITE_DEVELOPMENT', false);
+
+
+include "inc/inc.vite.php";
+
 new StarterSite();

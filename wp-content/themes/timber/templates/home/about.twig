@@ -1,0 +1,50 @@
+<section id="about" class="py-20">
+
+<div class="container">
+
+<div class="grid lg:grid-cols-2 gap-2">
+
+<div class="lg:mb-0 mb-4">
+<div data-aos-delay="100" data-aos="fade-right">
+<img src="{{ data.about.image }}" class="rounded-md" alt="{{ data.about.title }}" />
+
+</div>
+</div>
+
+<div data-aos-delay="300" data-aos="fade-left">
+
+<h2 class="top_title">{{ data.about.top_title }}</h2>
+
+<h3 class="h2 text-4xl mb-3 text-primary">{{ data.about.title }}</h3>
+
+<div class="leading-7">{{ data.about.description }}</div>
+
+<div class="grid lg:grid-cols-2 gap-6 mt-6">
+
+{% for item in data.about.checklist %}
+
+<div class="flex flex-row gap-2 items-start">
+
+<svg class="fill-primary mt-1" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 512 512">
+<path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+
+<span class="font-semibold">{{ item.name }}</span>
+
+</div>
+
+{% endfor %}
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>

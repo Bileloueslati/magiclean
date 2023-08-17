@@ -1,0 +1,17 @@
+<p>Bonjour, {{ firstName | capitalize }} vient de vous envoyer un message</p>
+
+<ul>
+
+<li>Nom et prénom: {{ firstName | capitalize  }} {{ lastName}} </li>
+
+{% if phone %} 
+
+<li>Numéro de téléphone: {{ phone }} </li>
+
+{% endif  %}
+
+<li>Email: {{ email }} </li>
+
+<li>Message: {{ message }} </li>
+
+</ul>

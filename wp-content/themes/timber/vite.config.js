@@ -33,7 +33,7 @@ export default defineConfig({
     // output dir for production build
     outDir: path.resolve(__dirname, './dist'),
     emptyOutDir: true,
-
+    
     // emit manifest so PHP can find the hashed files
     manifest: true,
 
@@ -54,7 +54,6 @@ export default defineConfig({
       }*/
     },
 
-    // minifying switch
     minify: true,
     write: true
   },
@@ -71,6 +70,7 @@ export default defineConfig({
 
     // serve over http
     https: false,
+
 
     // serve over httpS
     // to generate localhost certificate follow the link:

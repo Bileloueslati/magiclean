@@ -1,0 +1,20 @@
+
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+ .headroom {
+    will-change: transform;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+html,
+body {
+    scroll-padding-top: 65px; /* set to the height of your header */
+}

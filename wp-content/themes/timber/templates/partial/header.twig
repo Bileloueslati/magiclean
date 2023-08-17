@@ -1,0 +1,38 @@
+	<header class="header shadow">
+    <section class="py-3">
+    <div class="container">
+
+     {% block header %}
+
+	 <div class="flex flex-row items-center justify-between">
+	 
+	 <div>
+	 
+	 <a class="hdr-logo-link" href="{{site.url}}" rel="home">
+	 
+	 <img src="{{ settings.logo }}" alt="{{site.name}}" />
+ 
+	 </a>
+	 </div>
+
+	 <nav id="nav-main" class="nav-main hidden lg:block" role="navigation">
+	  {% include "menu.twig" with {'items': menu.get_items} %}
+	 </nav><!-- #nav -->
+
+	 <div>
+	 
+	 <div data-token="{{ data.forms.quoteToken }}" id="quote"></div>
+	 
+	 </div>
+	 
+	 </div>
+	            
+			{% endblock %}
+    
+    </div>
+
+   
+
+    </section>
+			
+		</header>

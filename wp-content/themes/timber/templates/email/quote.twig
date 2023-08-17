@@ -1,0 +1,28 @@
+<p>Bonjour, {{ fullName | capitalize  }} vient de vous envoyer un message</p>
+
+<ul>
+
+<li>Nom et prénom: {{ fullName | capitalize  }}</li>
+
+{% if phone %} 
+
+<li>Numéro de téléphone: {{ phone }} </li>
+
+{% endif  %}
+
+<li>Email: {{ email }} </li>
+
+<li>Entreprise: {{ company | capitalize  }} </li>
+
+<li>Surface en m²: {{ surface }} </li>
+
+<li>Interventions souhaitées par semaine: {{ interventions }} </li>
+
+{% if informations %} 
+
+<li>Plus de détails: {{ informations }} </li>
+
+{% endif  %}
+
+
+</ul>

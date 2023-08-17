@@ -67,7 +67,7 @@ h2, .h2 {
 }
 
 .btn {
-   @apply rounded-full py-3 px-6 text-white text-center font-poppins text-[16px] tracking-normal font-semibold bg-primary transition-all;
+   @apply rounded-full px-3 lg:px-6 lg:py-3 py-2 text-white text-center font-poppins text-[16px] tracking-normal font-semibold bg-primary transition-all;
    &:hover {
      @apply opacity-80
    }

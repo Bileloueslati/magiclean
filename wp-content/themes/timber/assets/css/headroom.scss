@@ -16,5 +16,5 @@
 
 html,
 body {
-    scroll-padding-top: 65px; /* set to the height of your header */
+    @apply lg:scroll-pt-[65px];
 }

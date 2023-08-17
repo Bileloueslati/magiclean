@@ -17,6 +17,10 @@ module.exports = {
         primary: "#0071a8",
         secondary: "#62e3df"
       },
+      animation: {
+        up: 'scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards',
+        down: 'scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards'
+    },
       fontFamily: {
         'rubik': ['Bricolage Grotesque'],
         'poppins': ['Bricolage Grotesque']

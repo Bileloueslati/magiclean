@@ -61,15 +61,14 @@ export default function Quote({token}: {token: string}) {
     <button className="btn flex items-center gap-2" onClick={handleOpen}>
         <span>Demander un devis</span>
         <svg className='fill-white' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-   
         </button>
 
     {createPortal(
-    <div tabIndex={-1} aria-hidden="true" className={`${open ? '' : 'opacity-0 hidden'} transform -translate--0 flex flex-col justify-center items-center fixed top-0 left-0 right-0 z-50 w-full overflow-x-hidden overflow-y-auto md:inset-0 h-full`}>
-    <div className="absolute top-0 left-0 h-full w-full z-30 backdrop-blur-sm bg-white/30"></div>
-    <div className="relative z-40 w-full max-w-2xl max-h-full">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <div className="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+    <div tabIndex={-1} aria-hidden="true" className={`${open ? 'z-50' : 'opacity-0 -z-[666]'} flex flex-col justify-center items-center fixed top-0 left-0 right-0 w-full overflow-x-hidden overflow-y-auto md:inset-0 h-full`}>
+    <div className="absolute top-0 left-0 h-full w-full z-30 backdrop-blur-sm bg-black/50"></div>
+    <div className={`relative z-40 w-full max-w-2xl max-h-full ${open ? "animate-up": "animate-down"}`}>
+        <div className="relative bg-white rounded-lg shadoW">
+            <div className="flex items-start justify-between p-4 lg:p-5 border-b rounded-md">
                 <div>
                 <h3 className="text-xl lg:text-2xl font-semibold text-primary">
                     Demande de devis
@@ -78,12 +77,12 @@ export default function Quote({token}: {token: string}) {
                 </div>
                 <button onClick={handleClose} type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
                     <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                     </svg>
                     <span className="sr-only">Fermer</span>
                 </button>
             </div>
-            <div className="p-4 space-y-4">
+            <div className="lg:p-5 space-y-5">
 
             <form className="block w-full" onSubmit={handleSubmit(onSubmit)}>
 
@@ -174,6 +173,16 @@ render={({field}) => (
 <div className="my-2 flex justify-center w-full">
 
 <button hidden={isSubmitSuccessful} disabled={isSubmitting} className="btn flex items-center gap-2 btn disabled:bg-slate-400 disabled:pointer-events-none lg:!px-8" onClick={handleOpen}>
+        {
+            isSubmitting && 
+          (
+            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+           </svg>
+          )
+        }
+       
         <span>Envoyer</span>
         <svg className='fill-white' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
    

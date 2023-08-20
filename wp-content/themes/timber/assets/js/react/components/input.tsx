@@ -12,7 +12,7 @@ const Input = forwardRef(({label, type = "text", errorMessage, error = false, re
 
      return (
     <div>
-    <label htmlFor={id || label} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{label} { required && <span className="text-red-500">*</span> }</label>
+    <label htmlFor={id || label} className="block mb-2 text-sm font-medium text-gray-900">{label} { required && <span className="text-red-500">*</span> }</label>
     <input 
     ref={ref} 
     type={type} 

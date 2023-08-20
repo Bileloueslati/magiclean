@@ -6,14 +6,17 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}} overflow-x-hidden" data-template="base.twig" data-ajax-url="{{ function("admin_url", "admin-ajax.php") }}">
+	<body class="{{body_class}} overflow-x-hidden" data-ajax-url="{{ function("admin_url", "admin-ajax.php") }}">
 	
 	 {% include 'partial/header.twig' %}
 
-		{% block content %}
+     <main class="overflow-x-hidden">{% block content %}
 					Sorry, no content
 				{% endblock %}
+</main>
 
+<div id="rgbd"></div>
+		
 		{% block footer %}
 		
 		{% include 'footer.twig' %}

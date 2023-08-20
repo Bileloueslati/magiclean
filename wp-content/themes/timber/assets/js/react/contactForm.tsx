@@ -110,7 +110,23 @@ render={({field}) => (
 
 <div className="block">
 <div className="inline-block float-right mt-3">
-<button className="btn disabled:bg-slate-400 disabled:pointer-events-none" type="submit" hidden={isSubmitSuccessful} disabled={isSubmitting}>Envoyer</button>
+
+<button hidden={isSubmitSuccessful} disabled={isSubmitting} className="btn flex items-center gap-2 btn disabled:bg-slate-400 disabled:pointer-events-none lg:!px-8">
+        {
+            isSubmitting && 
+          (
+            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+           </svg>
+          )
+        }
+       
+        <span>Envoyer</span>
+        <svg className='fill-white' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+   
+        </button>  
+
 </div>
 </div>
 

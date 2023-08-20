@@ -87,6 +87,11 @@ h2, .h2 {
   }
 
 
+  [hidden] {
+
+    display: none !important;
+  }
+
   @keyframes scaleUp {
     0% {
       transform:scale(.8) translateY(1000px);

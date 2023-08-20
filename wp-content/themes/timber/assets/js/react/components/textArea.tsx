@@ -9,7 +9,7 @@ type Props = Partial<InputHTMLAttributes<HTMLTextAreaElement>> & {
 const TextArea = forwardRef(({label, error = false, required = false, id, ...rest }: Props, ref: any) => {
      return (
     <div>
-    <label htmlFor={id || label} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{label} { required && <span className="text-red-500">*</span> }</label>
+    <label htmlFor={id || label} className="block mb-2 text-sm font-medium text-gray-900">{label} { required && <span className="text-red-500">*</span> }</label>
     <textarea
     ref={ref} 
     id={id || label} 

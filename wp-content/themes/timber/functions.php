@@ -188,7 +188,7 @@ class StarterSite extends Site
 	}
 }
 
-define('IS_VITE_DEVELOPMENT', false);
+define('IS_VITE_DEVELOPMENT', true);
 
 require "inc/inc.vite.php";
 

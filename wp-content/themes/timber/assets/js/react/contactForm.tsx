@@ -38,7 +38,7 @@ const ContactForm = ({token}: {token: string}) => {
     return (
         
        <>
-       <form className="my-5 block w-full" onSubmit={handleSubmit(onSubmit)}>
+       <form className="my-5 block w-full" onSubmit={handleSubmit(onSubmit)} noValidate>
 
 <div className="grid gap-6 mb-6 md:grid-cols-2">
 
@@ -111,7 +111,7 @@ render={({field}) => (
 <div className="block">
 <div className="inline-block float-right mt-3">
 
-<button hidden={isSubmitSuccessful} disabled={isSubmitting} className="btn flex items-center gap-2 btn disabled:bg-slate-400 disabled:pointer-events-none lg:!px-8">
+<button type="submit" hidden={isSubmitSuccessful} disabled={isSubmitting} className="btn flex items-center gap-2 btn disabled:bg-slate-400 disabled:pointer-events-none lg:!px-8">
         {
             isSubmitting && 
           (

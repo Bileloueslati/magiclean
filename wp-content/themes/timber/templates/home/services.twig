@@ -1,11 +1,11 @@
 
 {% set service = data.services %}
 
-<section id="services" class="py-20 bg-slate-100">
+<section id="services" class="py-20 bg-slate-100 relative">
 
 <div class="container">
 
-<div class="grid lg:grid-cols-6 gap-4">
+<div class="grid lg:grid-cols-6 gap-4 mb-10">
 
 <div class="lg:col-start-2 lg:col-span-4 text-center" data-aos-delay="300" data-aos="fade-down">
 
@@ -14,7 +14,6 @@
 <h3 class="lg:text-4xl text-3xl text-primary h2 mb-3">{{ service.title }}</h3>
 
 <p class="leading-7">{{ service.description }}</p>
-
 
 </div>
 
@@ -40,18 +39,19 @@
   %}
 
 
-<div class="swiper mt-4" data-breakpoints='{{ breakpoints | json_encode() }}'>
+<div class="swiper mt-4 !static" data-breakpoints='{{ breakpoints | json_encode() }}'>
+  
   <div class="swiper-wrapper">
 
 {% for key, service in service.services %}
     
-    <div class="swiper-slide"  data-aos-delay="{{ key + 2 }}00" data-aos="fade-up">
+    <div class="swiper-slide relative overflow-hidden" data-aos-delay="{{ key + 2 }}00" data-aos="fade-up">
 
-    <div class="bg-white shadow-sm rounded-md my-1 text-center">
+    <div class="bg-white shadow-sm rounded-md rounded-b-none my-1 text-center border-b-4 border-secondary transition-all duration-500 lg:hover:-translate-y-4">
 
     <img class="rounded-md mx-auto block h-[250px] w-full object-cover pointer-events-none" src="{{ service.image }}" alt="{{ service.title }}" />
 
-      <div class="py-4 px:3 lg:px-5">
+      <div class="py-4 px-4 lg:px-5">
 
        <h3 class="text-[18px] my-2 font-semibold">{{ service.title }}</h3>
 
@@ -59,22 +59,22 @@
       
       </div>
 
-
       </div>
-    
     
     </div>
     
     {% endfor %}
-
    
   </div>
 
+<div class="swiper-pagination mt-10 !bottom-[30px]"></div>
 
-</div>
+<div class="swiper-button-prev !hidden lg:!flex !left-[7%]"></div>
+
+<div class="swiper-button-next !hidden lg:!flex !right-[7%]"></div>
 
 
-
+</div> <!-- /.swiper -->
 
 
 </div>

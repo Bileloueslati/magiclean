@@ -82,9 +82,9 @@ export default function Quote({token}: {token: string}) {
                     <span className="sr-only">Fermer</span>
                 </button>
             </div>
-            <div className="lg:p-5 space-y-5">
+            <div className="p-4 lg:p-5 space-y-5">
 
-            <form className="block w-full" onSubmit={handleSubmit(onSubmit)}>
+            <form className="block w-full" onSubmit={handleSubmit(onSubmit)} noValidate>
 
             <div className="grid gap-6 mb-6 md:grid-cols-2">
 
@@ -172,7 +172,7 @@ render={({field}) => (
 
 <div className="my-2 flex justify-center w-full">
 
-<button hidden={isSubmitSuccessful} disabled={isSubmitting} className="btn flex items-center gap-2 btn disabled:bg-slate-400 disabled:pointer-events-none lg:!px-8" onClick={handleOpen}>
+<button type="submit" hidden={isSubmitSuccessful} disabled={isSubmitting} className="btn flex items-center gap-2 btn disabled:bg-slate-400 disabled:pointer-events-none lg:!px-8" onClick={handleOpen}>
         {
             isSubmitting && 
           (

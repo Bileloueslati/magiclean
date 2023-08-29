@@ -22,8 +22,8 @@ module.exports = {
         down: 'scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards'
     },
       fontFamily: {
-        'rubik': ['Bricolage Grotesque'],
-        'poppins': ['Bricolage Grotesque']
+        'rubik': ['Jost'],
+        'poppins': ['Jost']
       },      
       container: {
         center: true,

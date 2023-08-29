@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,13 +12,21 @@ import Headroom from "headroom.js";
 
 document.querySelectorAll<HTMLElement>('.swiper').forEach((el) => {
         new Swiper(el, {
-        modules: [Navigation, Pagination],
+        modules: [Pagination, Navigation],
         autoplay: {
             delay: 500,
             disableOnInteraction: true
         },
         speed: 500,
-        breakpoints: JSON.parse(el.dataset.breakpoints || '')
+        breakpoints: JSON.parse(el.dataset.breakpoints || ''),
+        slideToClickedSlide: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+  }
       });
 });
 
@@ -26,13 +34,13 @@ document.querySelectorAll<HTMLElement>('.swiper').forEach((el) => {
 
 AOS.init({
   duration: 1500,
-  anchorPlacement: 'top-center'
+  anchorPlacement: 'top-center',
+  once: true
 });
 
 // scroll animation
 
 document.querySelectorAll('a').forEach((el) => {
-
 
   const anchor = el.getAttribute('href');
 
@@ -65,10 +73,7 @@ document.querySelectorAll('a').forEach((el) => {
 
 // Sticky Header
 
-const headroom = new Headroom(document.querySelector("header")!);
-
-headroom.init();
-
+new Headroom(document.querySelector("header")!).init();
 
 // Active section on anchor
 
@@ -85,7 +90,6 @@ const observer = new IntersectionObserver((entries) => {
         document.querySelector(".active")?.classList.remove("active");
 
         document.querySelector(`[href="#${id}"]`)?.classList.add("active");
-            
      }
       
 

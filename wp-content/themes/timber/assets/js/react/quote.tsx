@@ -121,10 +121,9 @@ render={({field}) => (
 
 <Controller
 control={control}
-rules={{required: true}}
 name="company"
 render={({field}) => (
-<Input id="company" label="Nom de l'entreprise" error={!!errors.company} required {...field} />
+<Input id="company" placeholder="Nom de l'entreprise" label="Nom de l'entreprise (Si professionnel)" error={!!errors.company} {...field} />
 )}
 
 />

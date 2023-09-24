@@ -1,4 +1,4 @@
-<p>Bonjour, {{ fullName | capitalize  }} vient de vous envoyer un message</p>
+<p>Bonjour, {{ fullName | capitalize  }} vient de vous demander un devis</p>
 
 <ul>
 
@@ -12,7 +12,11 @@
 
 <li>Email: {{ email }} </li>
 
+{% if company %} 
+
 <li>Entreprise: {{ company | capitalize  }} </li>
+
+{% endif  %}
 
 <li>Surface en m²: {{ surface }} </li>
 
@@ -23,6 +27,5 @@
 <li>Plus de détails: {{ informations }} </li>
 
 {% endif  %}
-
 
 </ul>

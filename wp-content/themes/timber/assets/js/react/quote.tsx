@@ -67,7 +67,7 @@ export default function Quote({token}: {token: string}) {
     <div tabIndex={-1} aria-hidden="true" className={`${open ? 'z-50' : 'opacity-0 -z-[666]'} flex flex-col justify-center items-center fixed top-0 left-0 right-0 w-full overflow-x-hidden overflow-y-auto md:inset-0 h-full`}>
     <div className="absolute top-0 left-0 h-full w-full z-30 backdrop-blur-sm bg-black/50"></div>
     <div className={`relative z-40 w-full max-w-2xl max-h-full ${open ? "animate-up": "animate-down"}`}>
-        <div className="relative bg-white rounded-lg shadoW">
+        <div className="relative bg-white lg:rounded-lg">
             <div className="flex items-start justify-between p-4 lg:p-5 border-b rounded-md">
                 <div>
                 <h3 className="h2 text-xl lg:text-3xl text-primary">

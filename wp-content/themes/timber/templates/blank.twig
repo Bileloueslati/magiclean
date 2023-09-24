@@ -1,0 +1,25 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}} overflow-x-hidden" data-ajax-url="{{ function("admin_url", "admin-ajax.php") }}">
+	
+
+     <main class="overflow-x-hidden">{% block content %}
+					Sorry, no content
+				{% endblock %}
+</main>
+
+<div id="rgbd"></div>
+		
+	
+
+		{{ function('wp_footer') }}
+
+
+	</body>
+</html>

@@ -3,3 +3,4 @@ import './assets/js/app';
 import './assets/js/react/contactForm';
 import './assets/js/react/quote';
 import './assets/js/react/rgbd';
+import './assets/js/react/legalNotice';

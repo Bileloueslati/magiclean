@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 
 
 type Props = PropsWithChildren & {
-
      open: boolean;
      handler(value: boolean): void;
      title: string;
@@ -29,9 +28,6 @@ export default function Modal({open, handler, children, title, subtitle}: Props)
 
   return (
     <Fragment>
-
-
-
     {createPortal(
     <div tabIndex={-1} aria-hidden="true" className={`${open ? 'z-50' : 'opacity-0 -z-[666]'} flex flex-col justify-center items-center fixed top-0 left-0 right-0 w-full overflow-x-hidden overflow-y-auto md:inset-0 h-full`}>
     <div className="absolute top-0 left-0 h-full w-full z-30 backdrop-blur-sm bg-black/50"></div>
@@ -60,8 +56,6 @@ export default function Modal({open, handler, children, title, subtitle}: Props)
         </div>
     </div>
 </div>, document.body)}
-
-
 
     </Fragment>
   )

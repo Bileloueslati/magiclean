@@ -1,10 +1,11 @@
-<footer id="footer" class="bg-white border-slate-100 border-t-2 text-center py-3">
-
+<footer id="footer" class="bg-white border-slate-100 border-t-2 py-3">
 <div class="container">
-SEYACLEAN &#169; {{"now"|date('Y')}}
+<ul class="flex flex-row justify-center lg:gap-6 gap-3">
+<li id="legal_notice" data-html='{{legal_notices|raw|json_encode(constant('JSON_UNESCAPED_UNICODE'))  }}'></li>
+<li>|</li>
+<li>SEYACLEAN &#169; {{"now"|date('Y')}}</li>
+</ul>
 </div>
-
-
 </footer>
 
 

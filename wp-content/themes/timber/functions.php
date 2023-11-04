@@ -109,6 +109,7 @@ class StarterSite extends Site
 		$context['menu']  = new Menu();
 		$context['site']  = $this;
 		$context['settings'] = get_field('Settings', 'option');
+		$context["legal_notices"] = get_field("legal_notices", "option");
 		return $context;
 	}
 

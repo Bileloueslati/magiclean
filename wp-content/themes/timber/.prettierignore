@@ -1,9 +1,0 @@
-# COMPOSER
-/vendor
-# Public
-/public/*
-
-# BUILD FILES
-/node_modules/*
-/build/*
-/yarn-error.log

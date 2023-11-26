@@ -18,9 +18,20 @@
 
 {% endif  %}
 
+
+<li>Adresse: {{ address | capitalize }} </li>
+
+<li>Ville: {{ city | capitalize }} </li>
+
+<li>Code postal: {{ postal_code | capitalize }} </li>
+
 <li>Surface en m²: {{ surface }} </li>
 
+{% if interventions %} 
+
 <li>Interventions souhaitées par semaine: {{ interventions }} </li>
+
+{% endif  %}
 
 {% if informations %} 
 
